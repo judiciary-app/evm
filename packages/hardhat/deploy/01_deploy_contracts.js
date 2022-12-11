@@ -8,13 +8,13 @@ const sleep = require("../scripts/sleep");
 
 const localChainId = "31337";
 
-async function asyncForEach(array, callback) {
-  // eslint-disable-next-line no-plusplus
-  for (let index = 0; index < array.length; index++) {
-    // eslint-disable-next-line no-await-in-loop
-    await callback(array[index], index, array);
-  }
-}
+// async function asyncForEach(array, callback) {
+//   // eslint-disable-next-line no-plusplus
+//   for (let index = 0; index < array.length; index++) {
+//     // eslint-disable-next-line no-await-in-loop
+//     await callback(array[index], index, array);
+//   }
+// }
 
 module.exports = async ({ getNamedAccounts, deployments, getChainId }) => {
   const { deploy } = deployments;

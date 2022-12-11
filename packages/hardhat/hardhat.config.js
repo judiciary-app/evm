@@ -130,6 +130,15 @@ module.exports = {
       // gas: 2100000,
       // gasPrice: 8000000000,
     },
+    goerli: {
+      url: "https://goerli.infura.io/v3/" + process.env.INFURA_ID, // <---- YOUR INFURA ID! (or it won't work)
+      //      url: "https://speedy-nodes-nyc.moralis.io/XXXXXXXXXXXXXXXXXXXXXXXXX/eth/ropsten",// <---- YOUR MORALIS ID! (not limited to infura)
+      accounts: {
+        mnemonic: mnemonic(),
+      },
+      // gas: 2100000,
+      // gasPrice: 8000000000,
+    },
     xdai: {
       url: "https://rpc.xdaichain.com/",
       gasPrice: 1000000000,

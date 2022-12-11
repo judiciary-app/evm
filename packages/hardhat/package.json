@@ -51,6 +51,7 @@
     "deploy:ropsten": "hardhat deploy --network ropsten --export-all ../react-app/src/contracts/hardhat_contracts.json",
     "deploy:rinkeby": "hardhat deploy --network rinkeby --export-all ../react-app/src/contracts/hardhat_contracts.json",
     "deploy:mumbai": "hardhat deploy --network mumbai --export-all ../react-app/src/contracts/hardhat_contracts.json",
+    "deploy:goerli": "hardhat deploy --network goerli --export-all ../react-app/src/contracts/hardhat_contracts.json",
     "postdeploy": "hardhat run scripts/publish.js",
     "watch": "node scripts/watch.js",
     "accounts": "hardhat accounts",
