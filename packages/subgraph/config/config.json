@@ -1,0 +1,19 @@
+{
+  "localhost_JudiciaryArtifactsAddress": "0xc6e7DF5E7b4f2A278906862b61205850344D4e7d",
+  "localhost_JudiciaryENSRegistrarAddress": "0x68B1D87F95878fE05B998F19b66F4baba5De1aed",
+  "localhost_JudiciaryENSResolverAddress": "0x0165878A594ca255338adfa4d48449f69242Eb8F",
+  "localhost_JudiciaryMarketplaceAddress": "0x4ed7c70F96B99c776995fB64377f0d4aB3B0e1C1",
+  "localhost_PermissionManagementAddress": "0x5FbDB2315678afecb367f032d93F642f64180aa3",
+  "rinkeby_JudiciaryArtifactsAddress": "0xA26483fD58E76E71333cFD8ef3226C3695f92451",
+  "rinkeby_JudiciaryENSRegistrarAddress": "0x50D278CF2aB4210eD96603d768C3EDBff4aE6BA9",
+  "rinkeby_JudiciaryENSResolverAddress": "0x668e41Cf6c3bF30d76A32b58298D40B683b3B8c2",
+  "rinkeby_JudiciaryMarketplaceAddress": "0x45167e181c084be7A03Dd45c08AAD1648BA01AaE",
+  "rinkeby_PermissionManagementAddress": "0x596Cb32ef722869AAA918E22342d246b3dD5d80b",
+  "rinkeby_SplitsAddress": "0x77D13Eb0839AFaA95AC0a1026D5f7c943ba27524",
+  "rinkeby_SplitsFactoryAddress": "0x05a13bfB1F428beEaAe1eEA4d6aDC8c2D0d605Eb",
+  "ropsten_JudiciaryArtifactsAddress": "0x8FA72d7810Dc6Dc317B78d8586493aF18507907e",
+  "ropsten_JudiciaryENSRegistrarAddress": "0xDfB90deC3727572F83E970bEa8fdfb852b6A6A41",
+  "ropsten_JudiciaryENSResolverAddress": "0xca724cf5f2eeaBaA27028413AebB94C983dC100C",
+  "ropsten_JudiciaryMarketplaceAddress": "0x161041077FDAAf1bA951B80a4f1f96c3EFb93174",
+  "ropsten_PermissionManagementAddress": "0xC0252D06e41888906CFa6aAAE14A3d7E5934d921"
+}

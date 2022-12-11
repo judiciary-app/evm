@@ -1,0 +1,7 @@
+{
+  "solidity.defaultCompiler": "localNodeModule",
+  "solidity.enabledAsYouTypeCompilationErrorCheck": true,
+  "solidity.packageDefaultDependenciesContractsDirectory": "",
+  "solidity.packageDefaultDependenciesDirectory": "packages/hardhat/node_modules",
+  "discord.enabled": false
+}
