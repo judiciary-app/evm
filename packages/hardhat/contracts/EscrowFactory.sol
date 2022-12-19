@@ -89,4 +89,8 @@ contract EscrowFactory is Ownable {
         escrowContractAddress = _escrowContractAddress;
         return _escrowContractAddress;
     }
+
+    function fetchAllEscrows() external view returns (address[] memory) {
+        return allEscrows;
+    }
 }

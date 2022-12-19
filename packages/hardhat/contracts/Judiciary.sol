@@ -54,6 +54,34 @@ contract Judiciary is NFT, EscrowFactory, ReentrancyGuard {
     mapping(address => address[]) public getEscrowAddressesBySignerAddress;
     mapping(address => mapping(address => bool)) public hasSignedContract; // [escrowAddress][signerAddress] => true/false
 
+    /**
+     * @notice returns escrowAddresses for the given signerAddress
+     * @dev returns an array of escrowAddresses for the given signerAddress
+     * @param _signerAddress Address of the Signer
+     * @return _escrowAddressesBySignerAddress Array of Escrow Addresses
+     */
+    function fetchEscrowAddressesBySignerAddress(address _signerAddress)
+        external
+        view
+        returns (address[] memory _escrowAddressesBySignerAddress)
+    {
+        return getEscrowAddressesBySignerAddress[_signerAddress];
+    }
+
+    /**
+     * @notice returns tokenIds for the given escrowAddress
+     * @dev returns an array of tokenIds for the given escrowAddress
+     * @param _escrowAddress Address of the Escrow Wallet
+     * @return _tokenIds Array of Token IDs
+     */
+    function fetchTokenIdsByEscrowAddress(address _escrowAddress)
+        external
+        view
+        returns (uint256[] memory _tokenIds)
+    {
+        return getTokenIdsByEscrowAddress[_escrowAddress];
+    }
+
     // See EIP-2981 for more information: https://eips.ethereum.org/EIPS/eip-2981
     struct RoyaltyInfo {
         address receiver;
