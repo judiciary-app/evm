@@ -5,7 +5,7 @@
       "chainId": "5",
       "contracts": {
         "Escrow": {
-          "address": "0x37B55FFFbcABcAb694a2e1585792747c30865754",
+          "address": "0x521db0729f519b659752a3D241D5d4dED966Edda",
           "abi": [
             {
               "inputs": [],
@@ -668,7 +668,7 @@
           ]
         },
         "Judiciary": {
-          "address": "0xB11471C92665Ae1EFD4b67aE1533Ac342BF03c5C",
+          "address": "0xE22084932eC8E36BC90387dBa84d98A2efe76da9",
           "abi": [
             {
               "inputs": [
@@ -1290,6 +1290,25 @@
               "inputs": [
                 {
                   "internalType": "address",
+                  "name": "_judgeAddress",
+                  "type": "address"
+                }
+              ],
+              "name": "fetchEscrowAddressesByJudgeAddress",
+              "outputs": [
+                {
+                  "internalType": "address[]",
+                  "name": "_escrowAddressesByJudgeAddress",
+                  "type": "address[]"
+                }
+              ],
+              "stateMutability": "view",
+              "type": "function"
+            },
+            {
+              "inputs": [
+                {
+                  "internalType": "address",
                   "name": "_signerAddress",
                   "type": "address"
                 }
@@ -1391,6 +1410,30 @@
                 }
               ],
               "name": "getEscrowAddressByTokenId",
+              "outputs": [
+                {
+                  "internalType": "address",
+                  "name": "",
+                  "type": "address"
+                }
+              ],
+              "stateMutability": "view",
+              "type": "function"
+            },
+            {
+              "inputs": [
+                {
+                  "internalType": "address",
+                  "name": "",
+                  "type": "address"
+                },
+                {
+                  "internalType": "uint256",
+                  "name": "",
+                  "type": "uint256"
+                }
+              ],
+              "name": "getEscrowAddressesByJudgeAddress",
               "outputs": [
                 {
                   "internalType": "address",
