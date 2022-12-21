@@ -52,6 +52,7 @@ contract Judiciary is NFT, EscrowFactory, ReentrancyGuard {
     mapping(uint256 => address) public getEscrowAddressByTokenId;
     mapping(uint256 => address) public getContractSignerByTokenId;
     mapping(address => address[]) public getEscrowAddressesBySignerAddress;
+    mapping(address => address[]) public getEscrowAddressesByJudgeAddress;
     mapping(address => mapping(address => bool)) public hasSignedContract; // [escrowAddress][signerAddress] => true/false
 
     /**
@@ -66,6 +67,20 @@ contract Judiciary is NFT, EscrowFactory, ReentrancyGuard {
         returns (address[] memory _escrowAddressesBySignerAddress)
     {
         return getEscrowAddressesBySignerAddress[_signerAddress];
+    }
+
+    /**
+     * @notice returns escrowAddresses for the given judgeAddress
+     * @dev returns an array of escrowAddresses for the given judgeAddress
+     * @param _judgeAddress Address of the Judge
+     * @return _escrowAddressesByJudgeAddress Array of Escrow Addresses
+     */
+    function fetchEscrowAddressesByJudgeAddress(address _judgeAddress)
+        external
+        view
+        returns (address[] memory _escrowAddressesByJudgeAddress)
+    {
+        return getEscrowAddressesByJudgeAddress[_judgeAddress];
     }
 
     /**
@@ -190,6 +205,8 @@ contract Judiciary is NFT, EscrowFactory, ReentrancyGuard {
             _judge,
             true
         );
+
+        getEscrowAddressesByJudgeAddress[_judge].push(escrowWalletAddress);
 
         // send payment to the newly created escrow wallet
         _pay(escrowWalletAddress);

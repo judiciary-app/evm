@@ -265,6 +265,8 @@ contract Escrow is Initializable, ReentrancyGuardUpgradeable {
         nonReentrant
         returns (bool _success)
     {
+        require(msg.sender != _to, "cant deposit yourself");
+
         uint256 treasuryAmount;
 
         if (msg.value > 0) {
@@ -309,12 +311,16 @@ contract Escrow is Initializable, ReentrancyGuardUpgradeable {
 
         // transfer tokens to the contract if this contract has the approval to transfer the tokens
         require(
-            IERC20(_token).transferFrom(msg.sender, address(this), _amount),
+            IERC20(_token).transferFrom(
+                msg.sender,
+                address(this),
+                _amount - treasuryAmount
+            ),
             "token transfer failed"
         );
 
         // run depository chores
-        _deposit(_to, _token, _amount);
+        _deposit(_to, _token, _amount - treasuryAmount);
 
         return true;
     }

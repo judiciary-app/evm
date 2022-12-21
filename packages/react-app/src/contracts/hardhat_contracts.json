@@ -668,7 +668,7 @@
           ]
         },
         "Judiciary": {
-          "address": "0x6E924d0c857fA1BBfd87AD973b8F048df1d782Bc",
+          "address": "0xB11471C92665Ae1EFD4b67aE1533Ac342BF03c5C",
           "abi": [
             {
               "inputs": [
@@ -1268,6 +1268,57 @@
                   "internalType": "uint8",
                   "name": "",
                   "type": "uint8"
+                }
+              ],
+              "stateMutability": "view",
+              "type": "function"
+            },
+            {
+              "inputs": [],
+              "name": "fetchAllEscrows",
+              "outputs": [
+                {
+                  "internalType": "address[]",
+                  "name": "",
+                  "type": "address[]"
+                }
+              ],
+              "stateMutability": "view",
+              "type": "function"
+            },
+            {
+              "inputs": [
+                {
+                  "internalType": "address",
+                  "name": "_signerAddress",
+                  "type": "address"
+                }
+              ],
+              "name": "fetchEscrowAddressesBySignerAddress",
+              "outputs": [
+                {
+                  "internalType": "address[]",
+                  "name": "_escrowAddressesBySignerAddress",
+                  "type": "address[]"
+                }
+              ],
+              "stateMutability": "view",
+              "type": "function"
+            },
+            {
+              "inputs": [
+                {
+                  "internalType": "address",
+                  "name": "_escrowAddress",
+                  "type": "address"
+                }
+              ],
+              "name": "fetchTokenIdsByEscrowAddress",
+              "outputs": [
+                {
+                  "internalType": "uint256[]",
+                  "name": "_tokenIds",
+                  "type": "uint256[]"
                 }
               ],
               "stateMutability": "view",
