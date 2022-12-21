@@ -235,6 +235,11 @@ contract Escrow is Initializable, ReentrancyGuardUpgradeable {
 
             // if the beneficiary is not a participant, then add them as a participant
             _addParticipant(_to);
+
+            // add the amount to the beneficiary's refundable balance
+            getRefundableBalance[_token][beneficiary] =
+                getRefundableBalance[_token][beneficiary] +
+                _amount;
         }
 
         emit Deposit(
