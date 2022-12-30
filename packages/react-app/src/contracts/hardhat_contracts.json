@@ -5,7 +5,7 @@
       "chainId": "5",
       "contracts": {
         "Escrow": {
-          "address": "0x521db0729f519b659752a3D241D5d4dED966Edda",
+          "address": "0x33A75379216ff1C300F80A828104070102118E81",
           "abi": [
             {
               "inputs": [],
@@ -668,7 +668,7 @@
           ]
         },
         "Judiciary": {
-          "address": "0xE22084932eC8E36BC90387dBa84d98A2efe76da9",
+          "address": "0x10A6dd73cb7ecB807cEC2Ed6D99B0A032DD29e00",
           "abi": [
             {
               "inputs": [
