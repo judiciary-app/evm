@@ -60,7 +60,12 @@ module.exports = {
    */
   gasReporter: {
     currency: "USD",
-    coinmarketcap: process.env.COINMARKETCAP || null,
+    coinmarketcap:
+      process.env.COINMARKETCAP || "7f7939fe-0299-4a72-971a-e610088b14f0",
+    gasPrice: 21,
+    token: "ETH", // MATIC
+    // gasPriceApi:
+    //   "https://api.polygonscan.com/api?module=proxy&action=eth_gasPrice",
   },
 
   // if you want to deploy to a testnet, mainnet, or xdai, you will need to configure:
@@ -117,6 +122,7 @@ module.exports = {
       url: "https://mainnet.infura.io/v3/" + process.env.INFURA_ID, // <---- YOUR INFURA ID! (or it won't work)
       //      url: "https://speedy-nodes-nyc.moralis.io/XXXXXXXXXXXXXXXXXXXXXXXXX/eth/mainnet", // <---- YOUR MORALIS ID! (not limited to infura)
       gasPrice: mainnetGwei * 1000000000,
+      gas: 95000000000,
       accounts: {
         mnemonic: mnemonic(),
       },
@@ -275,20 +281,20 @@ module.exports = {
         settings: {
           optimizer: {
             enabled: true,
-            runs: 50000,
+            runs: 1000000000,
           },
         },
       },
-      {
-        version: "0.6.7",
-        settings: {
-          optimizer: {
-            enabled: true,
-            runs: 200,
-            // runs: 21000,
-          },
-        },
-      },
+      // {
+      //   version: "0.6.7",
+      //   settings: {
+      //     optimizer: {
+      //       enabled: true,
+      //       runs: 200,
+      //       // runs: 21000,
+      //     },
+      //   },
+      // },
     ],
   },
   ovm: {
