@@ -63,7 +63,7 @@ module.exports = {
     coinmarketcap:
       process.env.COINMARKETCAP || "7f7939fe-0299-4a72-971a-e610088b14f0",
     gasPrice: 21,
-    token: "ETH", // MATIC
+    token: "MATIC",
     // gasPriceApi:
     //   "https://api.polygonscan.com/api?module=proxy&action=eth_gasPrice",
   },
@@ -155,7 +155,14 @@ module.exports = {
     polygon: {
       // url: "https://speedy-nodes-nyc.moralis.io/XXXXXXXXXXXXXXXXXXXx/polygon/mainnet", // <---- YOUR MORALIS ID! (not limited to infura)
       url: `https://polygon-mainnet.infura.io/v3/${process.env.INFURA_ID}`,
-      gasPrice: 1000000000,
+      gasPrice: 150 * 1000000000,
+      accounts: {
+        mnemonic: mnemonic(),
+      },
+    },
+    matic: {
+      url: `https://polygon-mainnet.infura.io/v3/${process.env.INFURA_ID}`,
+      gasPrice: 150 * 1000000000,
       accounts: {
         mnemonic: mnemonic(),
       },
@@ -163,13 +170,6 @@ module.exports = {
     mumbai: {
       url: `https://polygon-mumbai.infura.io/v3/${process.env.INFURA_ID}`,
       // url: "https://speedy-nodes-nyc.moralis.io/XXXXXXXXXXXXXXXXXXXXXXX/polygon/mumbai", // <---- YOUR MORALIS ID! (not limited to infura)
-      gasPrice: 1000000000,
-      accounts: {
-        mnemonic: mnemonic(),
-      },
-    },
-    matic: {
-      url: `https://polygon-mainnet.infura.io/v3/${process.env.INFURA_ID}`,
       gasPrice: 1000000000,
       accounts: {
         mnemonic: mnemonic(),
@@ -281,7 +281,7 @@ module.exports = {
         settings: {
           optimizer: {
             enabled: true,
-            runs: 1000000000,
+            runs: 1000000,
           },
         },
       },
@@ -306,7 +306,9 @@ module.exports = {
     },
   },
   etherscan: {
-    apiKey: "DNXJA8RX2Q3VZ4URQIWP7Z68CJXQZSC6AW",
+    apiKey:
+      "MTS6CS1KNBKV4HMG27FF7TUUKFT4HT7EZS" || // MATIC
+      "DNXJA8RX2Q3VZ4URQIWP7Z68CJXQZSC6AW", // ETH
     // apiKey: {
     //   mainnet: "DNXJA8RX2Q3VZ4URQIWP7Z68CJXQZSC6AW",
     //   goerli: "DNXJA8RX2Q3VZ4URQIWP7Z68CJXQZSC6AW",
@@ -314,7 +316,7 @@ module.exports = {
     //   rinkeby: "DNXJA8RX2Q3VZ4URQIWP7Z68CJXQZSC6AW",
     //   ropsten: "DNXJA8RX2Q3VZ4URQIWP7Z68CJXQZSC6AW",
     //   mumbai: "DNXJA8RX2Q3VZ4URQIWP7Z68CJXQZSC6AW",
-    //   matic: "DNXJA8RX2Q3VZ4URQIWP7Z68CJXQZSC6AW",
+    //   matic: "MTS6CS1KNBKV4HMG27FF7TUUKFT4HT7EZS", // "DNXJA8RX2Q3VZ4URQIWP7Z68CJXQZSC6AW",
     //   // add other network's API key here
     // },
   },
